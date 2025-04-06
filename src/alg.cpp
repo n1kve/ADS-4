@@ -51,6 +51,11 @@ int countPairs3(int *arr, int len, int value) {
                     ++cnt;
                     --temp;
                 }
+                temp = sr;
+                while (temp + 1 <= hg && arr[temp + 1] == x) {
+                    ++cnt;
+                    ++temp;
+                }
                 break;
             } else if (arr[sr] < x) {
                 lg = sr + 1;
