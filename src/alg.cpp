@@ -52,11 +52,9 @@ int countPairs3(int *arr, int len, int value) {
                     --temp;
                 }
                 break;
-            }
-            else if (arr[sr] < x) {
+            } else if (arr[sr] < x) {
                 lg = sr + 1;
-            }
-            else {
+            } else {
                 hg = sr - 1;
             }
         }
