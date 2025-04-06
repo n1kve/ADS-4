@@ -23,21 +23,9 @@ int countPairs2(int *arr, int len, int value) {
     return cnt;
 }
 
-void bubbleSort(int *arr, int len) {
-    for (int i = 0; i < len - 1; ++i) {
-        for (int j = 0; j < len - 1 - i; ++j) {
-            if (arr[j] > arr[j + 1]) {
-                int t = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = t;
-            }
-        }
-    }
-}
-
 int countPairs3(int *arr, int len, int value) {
     int cnt = 0;
-    bubbleSort(arr, len);
+    std::sort(arr, arr + len);
     for (int i = 0; i < len; ++i) {
         int x = value - arr[i];
         int lg = i + 1;
